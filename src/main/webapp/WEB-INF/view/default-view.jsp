@@ -5,15 +5,16 @@
 
 <h1>Upload Your File</h1>
 
-<table>
-    <tr>
-        <td>
-            <input name="imgFile" id="imgFileToUpload" type="file">
-            <input type="submit" value="Upload">
-        </td>
-    </tr>
-</table>
-
+    <form action="uploadImage" method="post" enctype="multipart/form-data">
+        <table>
+            <tr>
+                <td>
+                    <input type="file" name="downloadedImg" accept="image/*">
+                    <input type="submit" value="Upload" multiple>
+                </td>
+            </tr>
+        </table>
+    </form>
 
 </body>
 </html>
