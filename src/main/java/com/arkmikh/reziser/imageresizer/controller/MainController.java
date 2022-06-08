@@ -32,6 +32,14 @@ public class MainController {
         return "default-view";
     }
 
+
+    /**
+     * Upload images to server, resize and converting them
+     *
+     * @param multipartFiles  Array of uploaded images
+     * @param request Get weight, height and extension from form
+     * @throws IOException
+     */
     // download button action
     @PostMapping("/uploadImage")
     public String uploadImage(
@@ -41,8 +49,6 @@ public class MainController {
         String name;
 
         for(MultipartFile file: multipartFiles){
-
-
 
             // checks if there any file
             if(!file.isEmpty()){
